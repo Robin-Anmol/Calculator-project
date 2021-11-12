@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&family=Teko:wght@600&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  font-family: "Metal Mania", cursive;
+  background: #091921;
+}
+body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  background: linear-gradient(#e91e63, #ffff00);
+  clip-path: circle(22% at 30% 20%);
+  opacity: 0.3;
+}
+body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 100%;
+  background: linear-gradient(#e91e63, #e710b1);
+  opacity: 0.3;
+  clip-path: circle(22% at 70% 90%);
+}
+
+#calculator-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(120px);
+  width: 85%;
+  height: 80vh;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 5px 5px 3px 0 rgb(255, 255, 255, 0.2),
+  2px 6px 3px 0 rgb(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+#calculator-box h2 {
+  color: #fff;
+  letter-spacing: 0.7rem;
+}
+#result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 25%;
+  flex-basis: 30%;
+}
+#history {
+  flex-basis: 40%;
+  width: 100%;
+  text-align: right;
+  margin: 0 20px;
+  padding: 20px;
+  font-size: 17px;
+  color: #ffffff;
+  opacity: 0.7;
+}
+
+#output {
+  width: 100%;
+  flex-basis: 60%;
+  text-align: right;
+  margin: 10px 20px;
+  font-size: 30px;
+  color: #ffffff;
+  word-wrap: break-word;
+}
+#input-key {
+  margin-top: 1rem;
+  flex-basis: 75%;
+  width: 100%;
+  display: grid;
+  grid-gap: 0.7rem;
+  grid-template-rows: repeat(4);
+  grid-template-columns: repeat(4, 1fr);
+  outline: none;
+  border: none;
+  font-family: "Teko", sans-serif;
+}
+
+.number,
+.operator {
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: transparent;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: 0;
+}
+
+.empty {
+  visibility: hidden;
+  cursor: none;
+}
+.operator:hover,
+.number:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #ffff;
+}
+
+button:nth-child(1) {
+  background-color: #ff002b;
+}
+button:nth-child(2) {
+  background-color: #1900ff;
+}
+button:nth-child(3) {
+  background-color: #544ba8;
+}
+button:nth-child(4) {
+  background-color: #20b2aa;
+}
+button:nth-child(8) {
+  background-color: #ffa500;
+}
+button:nth-child(12) {
+  background-color: #f08080;
+}
+button:nth-child(16) {
+  background-color: #7d93e0;
+}
+button:nth-child(20) {
+  background-color: #daff09;
+
+  color: #000;
+}
+
+
+@media screen and (min-width:425px){
+  #calculator-box{
+    width:fit-content;
+  }
+}
+@media screen and (min-width:768px) {
+  #calculator-box{
+    width:30%;
+  }
+
+}
